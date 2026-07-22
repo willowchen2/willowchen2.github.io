@@ -7,33 +7,132 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400;1,600&family=Instrument+Serif:ital@0;1&display=swap"
         rel="stylesheet">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience - Willow Chen</title>
+    <title>Experience | Willow Chen</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
+    <!-- Navigation Bar -->
     <header class="navbar">
         <a href="index.html" class="nav-brand">Willow Chen</a>
         <nav class="nav-links">
             <a href="index.html" class="nav-tab">About</a>
             <a href="experience.html" class="nav-tab active">Experience</a>
             <a href="projects.html" class="nav-tab">Projects</a>
+            <a href="writing.html" class="nav-tab">Writing</a>
             <a href="resume.html" class="nav-tab">Resume</a>
             <a href="contact.html" class="nav-tab">Contact</a>
         </nav>
     </header>
 
     <main>
-        <section class="content-section">
-            <h1>Experience</h1>
-            <p>What I've been up to...</p>
-        </section>
-    </main>
 
+        <img src="assets/flowerTrio.png" alt="Experience snapshot" class="exp-top-right-pic">
+        <h1>Experience</h1>
+        <p class="page-subtitle">A collection of technical instruction, software engineering, and speaker curation
+            roles.</p>
+
+        <div >
+
+            <!-- 1. Kode With Klossy -->
+            <div class="exp-card">
+                <div class="exp-content">
+                    <div class="exp-header">
+                        <div>
+                            <h2 class="exp-role">AI/ML Instruction Assistant</h2>
+                            <h3 class="exp-company">
+                                <a href="https://www.kodewithklossy.com" target="_blank" rel="noopener noreferrer"
+                                    class="company-link">
+                                    Kode With Klossy
+                                </a>
+                            </h3>
+                        </div>
+                        <span class="exp-date">Summer 2026</span>
+                    </div>
+                    <p class="exp-description">
+                        Instructed and mentored scholars through full-stack AI/ML capstone projects. Debugged
+                        interactive applications across Gradio and Hugging Face Spaces, supporting custom RAG chatbots.
+                    </p>
+                    <div class="exp-tags">
+                        <span class="exp-tag">AI/ML |</span>
+                        <span class="exp-tag">Gradio |</span>
+                        <span class="exp-tag">Hugging Face |</span>
+                        <span class="exp-tag">Mentorship & Teaching</span>
+                    </div>
+                </div>
+                <!-- Photo Container -->
+                <div class="exp-image-wrapper card-tilt-left">
+                    <img src="assets/IL_teamPic.png" alt="Kode With Klossy Instruction Assistant">
+                </div>
+            </div>
+
+            <!-- 2. Engineers Without Borders -->
+            <div class="exp-card">
+                <div class="exp-content">
+                    <div class="exp-header">
+                        <div>
+                            <h2 class="exp-role">Software Development Subteam Member</h2>
+                            <h3 class="exp-company">
+                                <a href="https://www.ewbcornell.org/" target="_blank" rel="noopener noreferrer"
+                                    class="company-link">
+                                    Engineers Without Borders — Cornell Chapter</a>
+                            </h3>
+                        </div>
+                        <span class="exp-date">Feb 2026 – Present</span>
+                    </div>
+                    <p class="exp-description">
+                        Collaborating on human-centered software solutions for local and international community
+                        infrastructure initiatives. Developing sustainable, impact-driven web tools focused on
+                        accessibility and community coordination.
+                    </p>
+                    <div class="exp-tags">
+                        <span class="exp-tag">Software Development | </span>
+                        <span class="exp-tag">Impact Tech |</span>
+                        <span class="exp-tag">Community Coordination</span>
+                    </div>
+                </div>
+                <!-- Photo Container -->
+                <div class="exp-image-wrapper card-tilt-right">
+                    <img src="assets/ewb.JPG" alt="Engineers Without Borders Cornell">
+                </div>
+            </div>
+
+            <!-- 3. TEDxCornell -->
+            <div class="exp-card">
+                <div class="exp-content">
+                    <div class="exp-header">
+                        <div>
+                            <h2 class="exp-role">Speaker Curation Subteam Member</h2>
+                            <h3 class="exp-company">
+                                <a href="https://tedxcornell.com/" target="_blank" rel="noopener noreferrer"
+                                    class="company-link">
+                                    TEDxCornell
+                                </a>
+                            </h3>
+                        </div>
+                        <span class="exp-date">Sep 2025 – Present</span>
+                    </div>
+                    <p class="exp-description">
+                        Curating, evaluating, and collaborating directly with speakers to refine high-impact ideas for
+                        the annual conference stage. Guiding talk structure, storytelling, and presentation design to
+                        bring multidisciplinary stories to life.
+                    </p>
+                    <div class="exp-tags">
+                        <span class="exp-tag">Speaker Curation | </span>
+                        <span class="exp-tag">Storytelling | </span>
+                        <span class="exp-tag">Event Curation</span>
+                    </div>
+                </div>
+                <!-- Photo Container -->
+                <div class="exp-image-wrapper card-tilt-left">
+                    <img src="assets/tedx.jpg" alt="TEDxCornell Speaker Curation">
+                </div>
+            </div>
+
+        </div>
+    </main>
 </body>
 
 </html>

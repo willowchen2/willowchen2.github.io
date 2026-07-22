@@ -21,20 +21,119 @@
             <a href="index.html" class="nav-tab active">About</a>
             <a href="experience.html" class="nav-tab">Experience</a>
             <a href="projects.html" class="nav-tab">Projects</a>
+            <a href="writing.html" class="nav-tab">Writing</a>
             <a href="resume.html" class="nav-tab">Resume</a>
             <a href="contact.html" class="nav-tab">Contact</a>
         </nav>
     </header>
 
     <main>
-        <section class="content-section">
-            <h1>About</h1>
-            <h2>Hi there! I'm Willow Chen</h2>
+        <section class="hero-section">
+
+            <!-- LEFT COLUMN: Text Wrapper -->
+            <div class="hero-text">
+                <h1 class="hero-title">Hi there! I'm Willow.</h1>
+                <h2 class="hero-subtitle">I'm a <span id="typed-text"></span></h2>
+
+                <div class="about-box">
+                    <p>
+                        I'm a <strong>Computer Science & English student</strong> at Cornell University interested in product management, user experience, and building tech that
+                        brings people together. To me, I view engineering and the humanities as two sides of the same coin: code builds the mechanics, while storytelling
+                        and human empathy give it purpose. I love taking messy, complex problems and turning them into simple, thoughtful digital 
+                        tools. When I'm not coding, designing, or writing, you can find me practicing taekwondo with my college's club team, taking long walks, or curating yet another playlist on Spotify...
+                </div>
+            </div>
+
+
+            <!-- RIGHT COLUMN: Scrapbook Wrapper -->
+            <div class="photo-right">
+                <div class="scrapbook-container">
+                    <!-- Background aesthetic image 1 (tilted left) -->
+                    <div class="scrapbook-card photo-accent-left">
+                        <img src="assets/orangeFlowers.jpg" alt="Aesthetic orange flowers">
+                    </div>
+
+                    <!-- MAIN PROFILE PHOTO (centered/front, polaroid frame style) -->
+                    <div class="scrapbook-card photo-main">
+                        <div class="tape-strip"></div>
+                        <img src="assets/srphoto.jpg" alt="Willow Chen">
+                    </div>
+
+                    <!-- Background aesthetic image 2 (tilted right) -->
+                    <div class="scrapbook-card photo-accent-right">
+                        <img src="assets/blueTile.jpg" alt="Blue Tile">
+                    </div>
+                </div>
+            </div>
+
         </section>
 
 
+        <!-- Photo Strip Section-->
+        <div class="photo-row-section">
+            <h3 class="photo-row-title">A glimpse into my world ✦</h3>
+            <div class="photo-row">
+                <!-- Photo 1 -->
+                <div class="mini-card card-tilt-left">
+                    <img src="assets/tkd.jpeg" alt="Taekwondo">
+                    <span class="card-caption">cornell taekwondo 🥋</span>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="mini-card card-tilt-right">
+                    <img src="assets/library.jpeg" alt="Library hopping">
+                    <span class="card-caption">library hopping 📖</span>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="mini-card card-tilt-left">
+                    <img src="assets/iceSkate.jpeg" alt="Ice skating w/ Lara">
+                    <span class="card-caption">rink sidequesting ⛸️</span>
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="mini-card card-tilt-right">
+                    <img src="assets/goat.jpeg" alt="Visual curation">
+                    <span class="card-caption">feeding baby goats 🍼</span>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="mini-card card-tilt-left">
+                    <img src="assets/fun.jpeg" alt="Bffs">
+                    <span class="card-caption">my bestest of friends 🫂</span>
+                </div>
+
+                <!-- Photo 6 -->
+                <div class="mini-card card-tilt-right">
+                    <img src="assets/nyc.jpeg" alt="Travel">
+                    <span class="card-caption">my 1st time in nyc! 🗽</span>
+                </div>
+
+
+            </div>
+        </div>
     </main>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed('#typed-text', {
+            strings: [
+                'developer.',
+                'apsiring product manager.',
+                'storyteller.',
+                'Cornell Engineer.',
+                'frozen yogurt enthusiast.',
+                'college sophomore.',
+                'writer.',
+            ],
+            typeSpeed: 60,      
+            backSpeed: 40,      
+            backDelay: 1400,    
+            loop: true,         
+            cursorChar: '|'     
+        });
+    </script>
 </body>
 
 </html>

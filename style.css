@@ -1,16 +1,16 @@
 :root {
-    --bg-color: #fff3ed;          
-    --text-primary: #2b1f1d;      
-    --text-muted: #8a6e67;        
-    --border-color: #fbd3c6;     
-    
-    --accent-orange: #ff5e36;     
+    --bg-color: #fff3ed;
+    --text-primary: #2b1f1d;
+    --text-muted: #8a6e67;
+    --border-color: #fbd3c6;
+
+    --accent-orange: #ff5e36;
     --accent-orange-hover: #e0451d;
-    --accent-peach-soft: #ffe3d8;  
-    
-    --accent-tile-blue: #0081a7;  
-    --accent-blue-soft: #e0f2f7;  
-    
+    --accent-peach-soft: #ffe3d8;
+
+    --accent-tile-blue: #0081a7;
+    --accent-blue-soft: #e0f2f7;
+
     --card-bg: #ffffff;
 
     --font-heading: 'Instrument Serif', Georgia, serif;
@@ -26,11 +26,19 @@ body {
     color: var(--text-primary);
     font-family: var(--font-body);
     margin: 0;
-    padding: 0 1.5rem;
+    padding: 0 3rem;
     line-height: 1.6;
 }
 
-h1, h2, h3 {
+header,
+main,
+footer {
+    width: 100%;
+}
+
+h1,
+h2,
+h3 {
     font-family: var(--font-heading);
     font-weight: 400;
     letter-spacing: 0.01em;
@@ -47,12 +55,16 @@ h2 {
     font-size: 2.2rem;
 }
 
-main, .content-section {
-    padding-top: 1rem !important;
+main,
+.content-section,
+.hero-section {
+    padding-top: 0 !important;
     margin-top: 0 !important;
 }
 
-header, .navbar {
+/* --- Navbar --- */
+header,
+.navbar {
     margin-bottom: 0 !important;
     padding-bottom: 0.5rem !important;
 }
@@ -61,9 +73,10 @@ header, .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 0;
+    padding: 1.5rem 0 0.75rem 0;
     border-bottom: 2px solid var(--border-color);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.5rem !important;
+    width: 100%;
 }
 
 .nav-brand {
@@ -75,19 +88,17 @@ header, .navbar {
     color: var(--text-primary);
 }
 
-
 .nav-links {
     display: flex;
     gap: 0.5rem;
 }
 
-
 .nav-tab {
     text-decoration: none;
     color: var(--text-muted);
     font-family: var(--font-heading);
-    font-style: italic;               
-    font-size: 1.15rem;               
+    font-style: italic;
+    font-size: 1.15rem;
     padding: 0.4rem 1.1rem;
     border-radius: 30px;
     transition: all 0.25s ease;
@@ -105,7 +116,8 @@ header, .navbar {
     box-shadow: 0 4px 15px rgba(255, 94, 54, 0.35);
 }
 
-.btn-primary, .btn-download {
+.btn-primary,
+.btn-download {
     display: inline-block;
     background-color: var(--accent-orange);
     color: #ffffff;
@@ -118,7 +130,8 @@ header, .navbar {
     transition: all 0.2s ease;
 }
 
-.btn-primary:hover, .btn-download:hover {
+.btn-primary:hover,
+.btn-download:hover {
     background-color: var(--accent-orange-hover);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(255, 94, 54, 0.45);
@@ -129,6 +142,7 @@ header, .navbar {
     margin-bottom: 4rem;
 }
 
+/* --- Resume Page Styling --- */
 .resume-section {
     display: flex;
     justify-content: center;
@@ -152,4 +166,530 @@ header, .navbar {
     height: auto;
     display: block;
     border-radius: 12px;
+}
+
+/* --- Full-Width Hero Section --- */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: start;
+    width: 100%;
+}
+
+/* Left Column Styling */
+.hero-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    margin: 0 0 0.3rem 1 !important;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 2.1rem;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    color: var(--text-primary);
+    margin: 0 !important;
+    line-height: 1.2;
+}
+
+#typed-text {
+    color: var(--accent-orange);
+    font-weight: 400;
+}
+
+.typed-cursor {
+    color: var(--accent-tile-blue);
+    font-style: normal;
+    font-weight: 300;
+}
+
+/* About Me Box expands with full layout */
+.about-box {
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    padding: 1.25rem 1.5rem;
+    margin-top: 1.5rem;
+    max-width: 690px;
+    /* Expands to fill out the wide layout */
+    box-sizing: border-box;
+    box-shadow: 0 8px 25px rgba(255, 94, 54, 0.08);
+}
+
+.about-box p {
+    margin: 0;
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Right Column Scrapbook Styling */
+.photo-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.scrapbook-container {
+    position: relative;
+    width: 360px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-115px);
+}
+
+.scrapbook-card {
+    position: absolute;
+    background-color: #ffffff;
+    padding: 0.8rem 0.8rem 1.2rem 0.8rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(43, 31, 29, 0.12);
+    transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+.scrapbook-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    object-fit: cover;
+}
+
+.photo-accent-left {
+    width: 170px;
+    top: 20px;
+    left: -10px;
+    transform: rotate(-12deg) translateX(-50px);
+    z-index: 1;
+
+}
+
+.photo-accent-right {
+    width: 160px;
+    bottom: 30px;
+    right: -10px;
+    transform: rotate(10deg) translateX(30px);
+    z-index: 1;
+}
+
+.photo-main {
+    width: 220px;
+    z-index: 2;
+    transform: rotate(-2deg);
+    box-shadow: 0 15px 35px rgba(255, 94, 54, 0.2);
+}
+
+.tape-strip {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 70px;
+    height: 22px;
+    background-color: rgba(255, 227, 216, 0.85);
+    border: 1px dashed var(--border-color);
+    backdrop-filter: blur(2px);
+    z-index: 3;
+}
+
+.scrapbook-card:hover {
+    z-index: 4;
+    transform: scale(1.04) rotate(0deg);
+}
+
+
+
+
+
+/* --- Photo Strip / Row Styling --- */
+.photo-row-section {
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.photo-row-title {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 1.2rem;
+}
+
+/* Row wrapper with smooth horizontal scrolling */
+.photo-row {
+    display: flex;
+    gap: 1.2rem;
+    overflow-x: auto;
+    padding: 1rem 0.5rem 1.8rem 0.5rem;
+    /* Extra padding so rotated cards don't clip */
+    scroll-snap-type: x mandatory;
+}
+
+/* Individual Polaroid Card */
+.mini-card {
+    flex: 0 0 190px;
+    background-color: #ffffff;
+    border: 1.5px solid var(--border-color);
+    border-radius: 12px;
+    padding: 0.6rem 0.6rem 0.8rem 0.6rem;
+    box-shadow: 0 8px 20px rgba(43, 31, 29, 0.08);
+    display: inline-block;
+    /* Required for transforms in flexbox */
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+    scroll-snap-align: start;
+    will-change: transform;
+}
+
+.mini-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.card-caption {
+    display: block;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.mini-card.card-tilt-left {
+    transform: rotate(-4deg);
+}
+
+.mini-card.card-tilt-right {
+    transform: rotate(4deg);
+}
+
+.mini-card:hover {
+    transform: translateY(-8px) rotate(0deg) scale(1.04) !important;
+    box-shadow: 0 14px 28px rgba(255, 94, 54, 0.22);
+    z-index: 10;
+}
+
+/* ==========================================================================
+   EXPERIENCE PAGE STYLING
+   ========================================================================== */
+
+.exp-card {
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    padding: 1.8rem 2rem;
+    box-shadow: 0 8px 25px rgba(255, 94, 54, 0.06);
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.exp-top-right-pic {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 310px;
+    transform: rotate(3deg) translateX(5px) translateY(100px);
+    transition: transform 0.4s ease-in-out;
+}
+
+.exp-top-right-pic:hover {
+    transform: rotate(15deg) translateX(5px) translateY(100px);
+}
+
+.exp-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 94, 54, 0.12);
+}
+
+.exp-content {
+    flex: 1;
+}
+
+.company-link {
+    color: #3b82f6;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.company-link:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Polaroid Photo Frame for Experience Cards */
+.exp-image-wrapper {
+    flex: 0 0 280px;
+    background-color: #ffffff;
+    border: 1.5px solid var(--border-color);
+    border-radius: 12px;
+    padding: 0.8rem 0.8rem 1.2rem 0.8rem;
+    box-shadow: 0 8px 20px rgba(43, 31, 29, 0.08);
+    transition: transform 0.25s ease;
+}
+
+.exp-image-wrapper img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.exp-image-wrapper:hover {
+    transform: scale(1.04) rotate(0deg);
+}
+
+.exp-role {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.exp-header {
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.exp-description {
+    color: var(--text-primary);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.exp-date {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+}
+
+.exp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.exp-tag {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+
+/* ==========================================================================
+   CONTACT PAGE STYLING
+   ========================================================================== */
+
+.contact-header-split {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2.5rem;
+    align-items: end;
+    margin-bottom: 1.5rem;
+}
+
+/* Header Left Column */
+.header-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+    color: var(--text-primary);
+}
+
+.sparkle {
+    color: var(--text-primary);
+    display: inline-block;
+}
+
+.page-subtitle {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 720px;
+}
+
+/* Header Right Column */
+.header-right {
+    text-align: right;
+    grid-column: 2;
+}
+
+.section-label-right {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin: 0;
+    display: inline-block;
+    transform: translateX(-395px) translateY(-10px);
+    margin-bottom: 0.4rem;
+    /* Reduced from 0.8rem to pull cards up closer */
+    margin-top: -0.5rem;
+    /* Nudges the text itself up higher */
+}
+
+
+/* --- Left Column Wrapper --- */
+.left-column-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* --- Hibiscus Decor Container --- */
+.hibiscus-decor {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    margin-top: 1.3rem;
+    padding-left: 0.5rem;
+}
+
+/* --- Hibiscus Image Styling & Hover Rotation --- */
+.hibiscus-flower {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.6s ease-in-out;
+}
+
+.hibiscus-flower:hover {
+    transform: rotate(40deg);
+}
+
+/* --- Main Cards Grid --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+/* Main Email Card (Left) */
+.main-contact-card {
+    position: relative;
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    padding: 1.2rem 1.8rem 1.5rem 1.8rem;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.08);
+}
+
+.contact-card-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+}
+
+.contact-card-desc {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+}
+
+.contact-email-link {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.6rem;
+    color: #13b5d2;
+    text-decoration: none;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+    display: inline-block;
+}
+
+.contact-email-link:hover {
+    color: #4368ce;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Right Column Social Cards */
+.contact-links-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 0;
+}
+
+.social-link-card {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.2rem 1.5rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.04);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-link-card:hover {
+    transform: translateY(-3px);
+    border-color: #3b82f6;
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15);
+}
+
+.social-link-card:hover .social-title {
+    color: #3b82f6;
+}
+
+.social-icon {
+    font-size: 1.8rem;
+}
+
+.social-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    margin: 0;
+    transition: color 0.2s ease;
+}
+
+.social-handle {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Location Card (non-clickable) */
+.offline-card {
+    cursor: default;
+}
+
+.offline-card:hover {
+    transform: none;
+    border-color: var(--border-color);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.04);
+}
+
+.offline-card:hover .social-title {
+    color: var(--text-primary);
 }
