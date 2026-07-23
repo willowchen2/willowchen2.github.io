@@ -9,7 +9,7 @@
         rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Willow Chen</title>
+    <title>Projects | Willow Chen</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,42 +20,80 @@
             <a href="index.html" class="nav-tab">About</a>
             <a href="experience.html" class="nav-tab">Experience</a>
             <a href="projects.html" class="nav-tab active">Projects</a>
-            <a href="writing.html" class = "nav-tab">Writing</a>
+            <a href="writing.html" class="nav-tab">Writing</a>
             <a href="resume.html" class="nav-tab">Resume</a>
-
             <a href="contact.html" class="nav-tab">Contact</a>
         </nav>
     </header>
-    <main>
-        <section class="content-section">
-            <h1>Projects</h1>
-            <p>Here are some of the things I've built...</p>
 
-            <div class="project-grid">
+    <main class="content-container">
+        <h1>Projects <span class="sparkle">✦</span></h1>
+        <p class="page-subtitle">A collection of full-stack applications, constraint-solving algorithms, and
+            human-centered design experiments.</p>
 
-                <!-- Project Card 1 -->
-                <div class="project-card">
+        <div class="projects-list">
+            <!-- Project 1: FitCheck -->
+            <article class="project-card">
+                <div class="project-content">
                     <div class="project-header">
-                        <h3>Project Title</h3>
-                        <span class="project-tag">React/Flask</span>
+                        <h2 class="project-title">FitCheck</h2>
+                        <div class="project-links">
+                            <a href="https://github.com/yourusername/closet" target="_blank" rel="noopener noreferrer"
+                                class="project-link-icon">GitHub ↗</a>
+                            <span class="link-divider">•</span>
+                            <a href="https://drive.google.com/file/d/1i2ADfE-B6tBk7ncAXu6FF1cq_LQ53aTD/view?usp=sharing"
+                                target="_blank" rel="noopener noreferrer" class="project-link-demo">Demo Video 🎥</a>
+                        </div>
                     </div>
-                    <p>A short description of what this project does.</p>
+                    <p class="project-description">
+                        An automated outfit generator app leveraging YOLOv8 object detection for smart wardrobe
+                        categorization, Flask database architecture, and a mobile-first React Native user interface.
                     </p>
-                    <a href="#" class="project-link">View Code &rarr;</a>
-                </div>
-
-                <!-- Project Card 2 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Project Title</h3>
-                        <span class="project-tag">Python</span>
+                    <div class="project-tags">
+                        <span class="project-tag">YOLOv8</span>
+                        <span class="project-tag">React Native</span>
+                        <span class="project-tag">Flask</span>
+                        <span class="project-tag">Computer Vision</span>
                     </div>
-                    <p>A short description of what this project does.</p>
-                    <a href="#" class="project-link">View Code &rarr;</a>
                 </div>
+                <a href="assets/closet-demo.mp4" target="_blank" rel="noopener noreferrer"
+                    class="project-image-wrapper card-tilt-left" title="Watch Closet Demo">
+                    <img src="assets/closet_preview.png" alt="Closet Outfit Generator Preview">
+                </a>
+            </article>
 
-            </div>
-        </section>
+            <!-- Project 2: PantryPulse -->
+            <article class="project-card">
+                <div class="project-content">
+                    <div class="project-header">
+                        <h2 class="project-title">PantryPulse</h2>
+                        <div class="project-links">
+                            <a href="https://github.com/yourusername/pantrypulse" target="_blank"
+                                rel="noopener noreferrer" class="project-link-icon">GitHub ↗</a>
+                            <span class="link-divider">•</span>
+                            <a href="assets/pantrypulse-demo.mp4" target="_blank" rel="noopener noreferrer"
+                                class="project-link-demo">Demo Video 🎥</a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A local logistics matching and assignment pipeline designed for community food distribution.
+                        Features constraint-solving optimization models built with Python & Flask to seamlessly route
+                        donations to local pantries.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Flask</span>
+                        <span class="project-tag">Optimization</span>
+                        <span class="project-tag">Impact Tech</span>
+                    </div>
+                </div>
+                <a href="assets/pantrypulse-demo.mp4" target="_blank" rel="noopener noreferrer"
+                    class="project-image-wrapper card-tilt-right" title="Watch PantryPulse Demo">
+                    <img src="assets/pantrypulse_preview.png" alt="PantryPulse Application Preview">
+                </a>
+            </article>
+
+        </div>
     </main>
 
 </body>
