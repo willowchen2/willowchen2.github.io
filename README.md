@@ -1,2 +1,2 @@
 # willowchen2.github.io
-Willow Chen's personal website.
+My personal website! Learn about me and what I do :)
