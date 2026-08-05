@@ -261,6 +261,20 @@ header,
     justify-content: flex-end;
 }
 
+.spotify-link {
+    color: var(--accent-orange);
+    text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 1px;
+    transition: all 0.2s ease;
+}
+
+.spotify-link:hover {
+    color: #1DB954; /* Classic Spotify green accent on hover */
+    border-bottom-color: #1DB954;
+    border-bottom-style: solid;
+}
+
 .scrapbook-container {
     position: relative;
     width: 360px;
